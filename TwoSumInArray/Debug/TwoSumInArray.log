@@ -1,0 +1,5 @@
+﻿  TwoSumInArray.cpp
+c:\users\icoy\documents\practice code\twosuminarray\twosuminarray\twosuminarray.cpp(33): warning C4018: '<': signed/unsigned mismatch
+c:\users\icoy\documents\practice code\twosuminarray\twosuminarray\twosuminarray.cpp(42): warning C4018: '<': signed/unsigned mismatch
+  TwoSumInArray.vcxproj -> C:\Users\Icoy\Documents\Practice Code\TwoSumInArray\Debug\TwoSumInArray.exe
+  TwoSumInArray.vcxproj -> C:\Users\Icoy\Documents\Practice Code\TwoSumInArray\Debug\TwoSumInArray.pdb (Full PDB)
