@@ -15,8 +15,8 @@ vector<int> twoSum(vector<int>&, int);
 
 int main()
 {
-	vector<int> num = { 2, 7, 11, 15 };
-	int target = 9;
+	vector<int> num = { 21, 7, 8, 11, 4, 15 };
+	int target = 12;
 	vector<int> indices = twoSum(num, target);
 	for (vector<int>::iterator it = indices.begin(); it != indices.end(); ++it)
 	{
@@ -27,7 +27,8 @@ int main()
 
 }
 
-vector<int> twoSum(vector<int>& nums, int target) {
+//Brute force
+/*vector<int> twoSum(vector<int>& nums, int target) {
 	vector<int>indices;
 	//sort(nums.begin(), nums.end());
 	for (int i = 0; i < nums.size(); i++) {
@@ -49,4 +50,23 @@ vector<int> twoSum(vector<int>& nums, int target) {
 	}
 	cout << "No two combination of indices";
 	return indices;
+}  */
+
+
+vector<int> twoSum(vector<int>& nums, int target) {
+	vector<int>indices;
+	map<int, int>sumTwo ;
+	int diff;
+	map<int, int>::iterator itr;
+	for (int i = 0; i < nums.size(); i++) {
+		diff = target - nums[i];
+		itr = sumTwo.find(diff);
+		if ( itr != sumTwo.end()) {
+			indices.push_back(itr->second);
+			indices.push_back(i);
+			return indices;
+		}
+		sumTwo.insert({ nums[i], i });
+	}
+	cout << "No two combination of indices";
 }
